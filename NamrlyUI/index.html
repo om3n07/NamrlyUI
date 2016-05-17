@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="rlybitsApp">
+<head>
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+        display: none !important;
+    }
+    </style>
+    <title>rlybits</title>
+</head>
+    <body ng-controller="rlybitsController as vm">
+        <div id="main">
+            <div class="headerContainer">
+                <span class="mainHeader show-fade-linear-slow">
+                    <label class="rly" ng-cloak>rly</label><label class="bits" ng-cloak>bits</label>
+                </span>
+            </div>
+            <div class="loadingContainer">
+                <div id="loading" class="drawing" ng-hide="!vm.loading">
+                    <div class="loading-dot"></div>
+                </div>
+            </div>
+            <div class="mainContainer" ng-hide="vm.loading" ng-cloak ng-click="vm.GetNextStartupNameDramatic()">
+                <label class="startupName">{{vm.startupName}}</label>
+            </div>
+        </div>
+        <script src="Scripts/angular.min.js"></script>
+        <script src="Scripts/angular-animate.js"></script>
+        <script src="app/app.module.js"></script>
+        <script src="app/namrlyService.js"></script>
+        <script src="app/rlybitsController.js"></script>
+    <link href="app/app.css" rel="stylesheet"/>
+        <link href="app/loading.css" rel="stylesheet" />
+    </body>
+</html>
