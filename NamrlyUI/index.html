@@ -1,36 +1,50 @@
 ﻿<!DOCTYPE html>
-
 <html ng-app="rlybitsApp">
 <head>
     <style>
         [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-        display: none !important;
-    }
+            display: none !important;
+        }
     </style>
     <title>rlybits</title>
 </head>
     <body ng-controller="rlybitsController as vm">
-        <div id="main">
-            <div class="headerContainer">
-                <span class="mainHeader show-fade-linear-slow">
+    <div>
+        <div class="headContainer">
+            <span class="headSpan show-fade-linear-slow">
                     <label class="rly" ng-cloak>rly</label><label class="bits" ng-cloak>bits</label>
                 </span>
+        </div>
+        <div class="mainContainer row" ng-cloak>
+            <div class="col-md-4" ng-cloak>
+                <span><input class="swing" ng-model="vm.baseWord" id="name" type="text" placeholder="Inspire our algorithm" ng-cloak/><label for="name" ng-cloak>Inspiration</label></span>
             </div>
-            <div class="loadingContainer">
-                <div id="loading" class="drawing" ng-hide="!vm.loading">
-                    <div class="loading-dot"></div>
+            <div class="col-md-8"  ng-hide="vm.loading" ng-click="vm.GetNextStartupNameDramatic()" ng-cloak>
+                <span><label class="startupName">{{vm.startupName}}</label></span>
+            </div>
+            <div class="col-md-8" ng-hide="!vm.loading" ng-cloak>
+                <div class="sk-folding-cube">
+                    <div class="sk-cube1 sk-cube"></div>
+                    <div class="sk-cube2 sk-cube"></div>
+                    <div class="sk-cube4 sk-cube"></div>
+                    <div class="sk-cube3 sk-cube"></div>
                 </div>
             </div>
-            <div class="mainContainer" ng-hide="vm.loading" ng-cloak ng-click="vm.GetNextStartupNameDramatic()">
-                <label class="startupName">{{vm.startupName}}</label>
-            </div>
         </div>
+    </div>
+        <script src="Scripts/jquery-1.9.1.min.js"></script>
+        <script src="Scripts/bootstrap.min.js"></script>
+        <script src="Scripts/toastr.min.js"></script>
         <script src="Scripts/angular.min.js"></script>
         <script src="Scripts/angular-animate.js"></script>
         <script src="app/app.module.js"></script>
         <script src="app/namrlyService.js"></script>
         <script src="app/rlybitsController.js"></script>
-    <link href="app/app.css" rel="stylesheet"/>
+        <link href="Content/bootstrap.min.css" rel="stylesheet" />
+        <!--<link href="Content/bootstrap-theme.min.css" rel="stylesheet" />-->
+        <link href="Content/toastr.min.css" rel="stylesheet" />
         <link href="app/loading.css" rel="stylesheet" />
+        <link href="app/app.css" rel="stylesheet"/>
+        <link href="Content/textInputLove.css" rel="stylesheet" />
     </body>
 </html>

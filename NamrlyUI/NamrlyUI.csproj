@@ -66,13 +66,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\assets\loader.gif" />
-    <Content Include="app\assets\giphy.gif" />
-    <Content Include="app\assets\newloadinggif.gif" />
-    <Content Include="app\assets\stuff.gif" />
-    <Content Include="app\assets\stuff2.gif" />
-    <Content Include="app\assets\stuff3.gif" />
     <Content Include="app\loading.css" />
+    <Content Include="Content\textInputLove.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
     <Content Include="packages.config" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
@@ -84,7 +81,11 @@
     <Content Include="app\fonts\Stellar-light.otf" />
     <Content Include="app\fonts\Stellar-Medium.otf" />
     <Content Include="app\fonts\Stellar-Regular.otf" />
+    <Content Include="Content\toastr.scss" />
+    <Content Include="Content\toastr.less" />
     <None Include="Properties\PublishProfiles\rlybits1.pubxml" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular.min.js.map" />
@@ -104,6 +105,7 @@
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -28,17 +28,15 @@ html {
     height: 100%;
 }
 
-.mainHeader {
+.headSpan {
     color: whitesmoke;
     font-size: 153px;
     font-family: 'stellarLight', Fallback, sans-serif;
     letter-spacing: 6px;
 }
 
-.headerContainer {
-    padding: 40px;
-    margin-bottom: 70px;
-    margin-top: 80px;
+.headContainer {
+    padding: 80px;
     text-align: center;
     height: 20%;
 }
@@ -47,8 +45,8 @@ html {
     color: lightgrey;
 }
 .mainContainer {
-    padding-top: 5%;
-    text-align: center;
+width: 100%;
+
 }
 
 .show-fade-linear-slow {
@@ -62,23 +60,9 @@ html {
     transition: .8s;
 }
 
-/*.show-fade-slow.ng-leave {
-  transition:0.5s linear all;
-  opacity:1;
-}*/
-
-#getInitialButton {
-    color: whitesmoke;
-    letter-spacing: 1px;
-    font-size: 55px;
-    letter-spacing: 4px;
-    font-family: stellarMedium Fallback, sans-serif;
-    text-align: center;
-}
-
 .startupName {
     color: whitesmoke;
-    font-size: 55px;
+    font-size: 20px;
     letter-spacing: 4px;
     font-family: stellarMedium Fallback, sans-serif;
 }
@@ -94,30 +78,4 @@ html {
     color: lightblue;
 }
 #startupNameContainer {
-    text-align: center;
 }
-
-#loadingSpinnerDiv {
-    display : block;
-    position : fixed;
-    z-index: 100;
-    left : 0;
-    bottom : 0;
-    right : 0;
-    top : 0;
-}
-
-#loadingSpinner {
-    left : 50%;
-    top : 50%;
-    position : absolute;
-    z-index : 101;
-    width : 400px;
-    height : 400px;
-    margin-left : -200px;
-    margin-top : -200px;
-}
-
-/*body {
-  background: #E51C23;
-}*/

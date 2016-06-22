@@ -8,6 +8,7 @@
         var vm = this;
         vm.startupName = 'Click to get your startup name';
         vm.loading = false;
+        vm.baseWord = null;
         activate();
 
         function activate() {
@@ -19,14 +20,14 @@
 
         function getStartupNameDramatic() {
             vm.loading = true;
-            namrlyService.GetStartupName(null).then(function (response) {
+            namrlyService.GetStartupName(vm.baseWord).then(function (response) {
                 vm.startupName = response.data;
                 $timeout(function () {
                     vm.loading = false;
-                }, 2640);
+                }, 2540); // 2.54 seconds
                 
-            }, function () {
-                alert('there was an error getting startup name data.');
+            }, function (data) {
+                toastr.error('there was an error getting startup name data.\n' + data.data.Message);
             });
         }
     }

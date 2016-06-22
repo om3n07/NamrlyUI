@@ -5,10 +5,13 @@
 
     function namrlyService($http) {
         var serviceBase = "http://namrly.azurewebsites.net/api/";
-        var getStartupName = function (includeImmatureSuffixes) {
-            var serviceAddress = serviceBase + "Namrly";
-            if (includeImmatureSuffixes && includeImmatureSuffixes === true) {
-                serviceAddress += "?includeImmatureSuffixes=true";
+        var getStartupName = function (baseWord, includeAdditionalSuffixes) {
+            var serviceAddress = serviceBase + "Namrly?";
+            if (baseWord) {
+                serviceAddress += "baseWord=" + baseWord;
+            }
+            if (includeAdditionalSuffixes && includeAdditionalSuffixes === true) {
+                serviceAddress += "includeAdditionalSuffixes=true";
             }
 
             return $http.get(serviceAddress);
