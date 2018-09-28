@@ -1,0 +1,20 @@
+﻿{
+  "environmentSettings": {
+    "webSite": {
+      "name": "rlybits",
+      "location": "East US 2"
+    },
+    "databases": [
+      {
+        "connectionStringName": "",
+        "databaseName": "",
+        "serverName": "",
+        "user": "",
+        "password": "",
+        "edition": "",
+        "size": "",
+        "collation": ""
+      }
+    ]
+  }
+}

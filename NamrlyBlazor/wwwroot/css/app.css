@@ -1,0 +1,78 @@
+﻿@font-face {
+    font-family: 'stellarBold';
+    src: url('../fonts/Stellar-Bold.otf') format("opentype"); 
+}
+
+@font-face {
+    font-family: 'stellarLight';
+    src: url('../fonts/Stellar-light.otf') format("opentype"); 
+}
+
+@font-face {
+    font-family: 'stellarMedium';
+    src: url('../fonts/Stellar-Medium.otf') format("opentype"); 
+}
+
+@font-face {
+    font-family: 'stellarRegular';
+    src: url('../fonts/Stellar-Regular.otf') format("opentype"); 
+}
+
+body { 
+    background: url(../assets/bg2.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
+
+.headSpan {
+    color: whitesmoke;
+    font-size: 153px;
+    font-family: 'stellarLight', Fallback, sans-serif;
+    letter-spacing: 6px;
+}
+
+.headContainer {
+    padding: 80px;
+    text-align: center;
+    height: 20%;
+}
+
+.rly {
+    color: lightgrey;
+}
+
+.mainContainer {
+    width: 100%;
+}
+
+.show-fade-linear-slow {
+    -webkit-transition: .9s;
+    transition: .9s;
+}
+
+.show-fade-slow {
+    transition-delay: 1s;
+    -webkit-transition: .8s;
+    transition: .8s;
+}
+
+.startupName {
+    color: whitesmoke;
+    font-size: 20px;
+    letter-spacing: 4px;
+    font-family: stellarMedium Fallback, sans-serif;
+}
+
+.startupLabel {
+    color: lightgrey;
+    font-size: 28px;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+}
+
+.startupName:hover {
+    color: lightblue;
+}
