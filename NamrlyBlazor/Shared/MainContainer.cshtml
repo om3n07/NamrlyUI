@@ -1,0 +1,57 @@
+﻿@inject HttpClient Http
+
+<div class="mainContainer row">
+    <div class="col-md-4">
+        <span>
+            <input class="swing" id="name" type="text" placeholder="Inspire our algorithm" bind="@baseWord" /><label for="name">Inspiration</label>
+        </span>
+    </div>
+    @if (loading)
+    {
+        <LoadingModal />
+    }
+    else
+    {
+        <div class="col-md-8" onclick="@(() => GetNextStartupNameDramatic())">
+            <span><label class="startupName">@startupName</label></span>
+        </div>
+    }
+</div>
+
+@functions{
+    readonly string serviceBase = "http://namrly.azurewebsites.net/api/";
+
+    bool loading { get; set; } = false;
+    bool includeSuffix { get; set; } = false;
+    string baseWord { get; set; } = "";
+    string startupName { get; set; } = "click here to start";
+
+    async Task GetNextStartupNameDramatic()
+    {
+        var address = $"{serviceBase}Namrly?";
+        if (!string.IsNullOrEmpty(baseWord))
+            address += $"baseWord={baseWord}";
+
+        if (includeSuffix)
+            address += "includeAdditionalSuffixes=true";
+
+        await PullName(address);
+    }
+
+    async Task PullName(string address)
+    {
+        loading = true;
+        try
+        {
+            startupName = await Http.GetStringAsync(address);
+        }
+        catch(Exception exception)
+        {
+            startupName = exception.Message;
+        }
+        finally
+        {
+            loading = false;
+        }
+    }
+}
